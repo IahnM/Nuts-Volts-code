@@ -1,0 +1,111 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws NumberFormatException, IOException { 
+    int Opp = 0;
+    float Uno = 0;
+    float Dos = 0;
+    int Apagar = 0;
+      
+    float Geo = 0;
+    float LUno = 0;
+    float LDos = 0;
+
+      while (Apagar == 0){
+      
+      Scanner scanner = new Scanner(System.in);
+      
+        System.out.println("Escoje la Operacion a Realizar: ");
+        System.out.println("1. Suma");
+        System.out.println("2. Resta");
+        System.out.println("3. Multiplicacion");
+        System.out.println("4. Division");
+        System.out.println("5. Geometria");
+        System.out.println("6. Apagar");
+      Opp = scanner.nextInt();
+    //Apagar
+      if (Opp == 6) {
+
+          Apagar = 1;
+        
+      } else if (Opp == 5){
+        System.out.println("Escoje la figura para encontrar el area: ");
+        System.out.println("1. Circulo");
+        System.out.println("2. Cuadrado");
+        System.out.println("3. Triangulo");
+        Geo = scanner.nextInt();
+      }
+        //Circulo
+          if (Geo == 1) {
+              System.out.println("Ingresa el radio del circulo:");
+              LUno = scanner.nextInt();
+            
+              System.out.println("Su Resultado es: ");
+              System.out.println(3.14159 * LUno * LUno);
+        //Cuadrado
+          } else if (Geo == 2) {
+            System.out.println("Ingresa un lado del cuadrado:");
+            LUno = scanner.nextInt();
+
+            System.out.println("Su Resultado es: ");
+            System.out.println(LUno * 2);
+        //Triangulo
+          } else if (Geo == 3) { 
+            System.out.println("Ingresa el primer lado del triangulo:");
+            LUno = scanner.nextInt();
+
+            System.out.println("Ingresa el segundo lado del triangulo:");
+            LDos = scanner.nextInt();
+
+            System.out.println("Su Resultado es: ");
+            System.out.println(LUno * LDos / 2);
+            
+      } else {
+
+        //Suma
+          if (Opp == 1) {
+            System.out.println("Ingrese el primer numero: ");
+            Uno = scanner.nextInt();
+              System.out.println("Ingrese el segundo numero: ");
+            Dos = scanner.nextInt();
+            
+              System.out.println("Su Resultado es: ");
+              System.out.println(Uno + Dos);
+        //Resta
+          } else if (Opp == 2) {
+            System.out.println("Ingrese el primer numero: ");
+            Uno = scanner.nextInt();
+              System.out.println("Ingrese el segundo numero: ");
+            Dos = scanner.nextInt();
+
+              System.out.println("Su Resultado es: ");
+              System.out.println(Uno - Dos);
+        //Multiplicacion
+          } else if (Opp == 3) { 
+            System.out.println("Ingrese el primer numero: ");
+            Uno = scanner.nextInt();
+              System.out.println("Ingrese el segundo numero: ");
+            Dos = scanner.nextInt();
+ 
+              System.out.println("Su Resultado es: ");
+              System.out.println(Uno * Dos);
+        //Division
+          } else if (Opp == 4) { 
+            System.out.println("Ingrese el primer numero: ");
+            Uno = scanner.nextInt();
+              System.out.println("Ingrese el segundo numero: ");
+            Dos = scanner.nextInt();
+
+            if (Dos == 0){
+              System.out.println("Error");
+            } else {
+              System.out.println("Su Resultado es: ");
+              System.out.println(Uno / Dos);
+            }
+          }
+        }
+      System.out.println("------------------------");
+    }
+  }
+}
