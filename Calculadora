@@ -30,6 +30,7 @@ public class Main {
           Apagar = 1;
         
       } else if (Opp == 5){
+    //Geometria
         System.out.println("Escoje la figura para encontrar el area: ");
         System.out.println("1. Circulo");
         System.out.println("2. Cuadrado");
